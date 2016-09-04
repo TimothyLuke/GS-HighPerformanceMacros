@@ -1,0 +1,5 @@
+package-as: GS-HighPerformanceMacros
+
+ignore:
+    - .travis.yml
+    - README.md

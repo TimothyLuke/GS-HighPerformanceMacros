@@ -1,0 +1,41 @@
+# .travis.yml
+language: python
+sudo: true
+
+env:
+  - LUA="lua=5.1" LUAC="luac5.1"
+
+addons:
+  apt:
+    packages:
+      - liblua5.1-bitop0
+
+before_install:
+  - pip install hererocks
+  - hererocks lua_install -r^ --$LUA
+  - export PATH=$PATH:$PWD/lua_install/bin
+
+install:
+  - luarocks install luacheck
+  - luarocks install mockagne 1.0
+  - luarocks install luaunit
+  - luarocks install luabitop
+  - luarocks install busted
+  - luarocks install luacov
+  - luarocks install luacov-coveralls
+
+script:
+  - luacheck --no-unused --allow-defined --std max+busted GS-DraikMacros/Macros/*.lua --globals GSMasterOptions Sequences
+
+after_success:
+  - luacov-coveralls -e $TRAVIS_BUILD_DIR/lua_install
+
+notifications:
+  email:
+    on_failure: always
+    on_success: change
+
+cache:
+  apt: true
+  directories:
+    - $HOME/.luarocks

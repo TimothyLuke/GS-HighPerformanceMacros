@@ -3,3 +3,4 @@ package-as: GS-HighPerformanceMacros
 ignore:
     - .travis.yml
     - README.md
+    - GS-HighPerformanceMancros-master.toc

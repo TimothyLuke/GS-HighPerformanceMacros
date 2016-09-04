@@ -25,7 +25,7 @@ install:
   - luarocks install luacov-coveralls
 
 script:
-  - luacheck --no-unused --allow-defined --std max+busted Macros/*.lua --globals GSMasterOptions Sequences
+  - luacheck --no-unused --allow-defined --std max+busted Macros/*.lua --globals GSMasterSequences Sequences GSStaticPriority GSMasterOptions
 
 after_success:
   - luacov-coveralls -e $TRAVIS_BUILD_DIR/lua_install

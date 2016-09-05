@@ -20,7 +20,6 @@ PreMacro = [[
 "/cast [nochanneling] !Kill Command",
 "/cast [nochanneling] Dire Frenzy",
 "/cast [nochanneling] Multi-Shot",
-"/cast [nochanneling] Titan's Thunder",
 "/cast [nochanneling] !Kill Command",
 "/cast [nochanneling] Bestial Wrath",
 PostMacro = [[
@@ -46,7 +45,6 @@ PreMacro = [[
 "/cast [nochanneling] Dire Frenzy",
 "/cast [nochanneling] Concussive Shot",
 "/cast [nochanneling] Cobra Shot",
-"/cast [nochanneling] Titan's Thunder",
 "/cast [nochanneling] !Kill Command",
 "/cast [nochanneling] Bestial Wrath",
 PostMacro = [[
@@ -96,7 +94,6 @@ PreMacro = [[
 "/cast [nochanneling] Intimidation",
 "/cast Barrage",
 "/cast [nochanneling] Multi-Shot",
-"/cast [nochanneling] Titan's Thunder",
 PostMacro = [[
 /cast Aspect of the Wild
 ]],
@@ -130,7 +127,6 @@ PreMacro = [[
 "/cast [nochanneling] Intimidation",
 "/cast [nochanneling] Cobra Shot",
 "/cast [nochanneling] Concussive Shot",
-"/cast [nochanneling] Titan's Thunder",
 "/cast [nochanneling] !Kill Command",
 "/cast [nochanneling] Bestial Wrath",
 PostMacro = [[
@@ -156,7 +152,6 @@ PreMacro = [[
 "/cast [nochanneling] Intimidation",
 "/cast [nochanneling] Dire Frenzy",
 "/cast Barrage",
-"/cast [nochanneling] Titan's Thunder",
 "/cast [nochanneling] !Kill Command",
 "/cast [nochanneling] Bestial Wrath",
 PostMacro = [[

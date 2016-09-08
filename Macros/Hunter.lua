@@ -5,7 +5,7 @@ local Sequences = GSMasterSequences
 ------------------
 Sequences['HP_RBMAoE'] = {
 specID = 253,
-author = "John",
+author = "Sir_Ewing",
 helpTxt = "Raiding AoE - Talent: 3212233",
 StepFunction = GSStaticPriority,
 PreMacro = [[
@@ -30,7 +30,7 @@ PostMacro = [[
 
 Sequences['HP_RBMmain'] = {
 specID = 253,
-author = "John",
+author = "Sir_Ewing",
 helpTxt = "Raiding main - Talent: 3212233",
 StepFunction = GSStaticPriority,
 PreMacro = [[
@@ -56,7 +56,7 @@ PostMacro = [[
 
 Sequences['HP_lookdead'] = {
 specID = 253,
-author = "John",
+author = "Sir_Ewing",
 helpTxt = "Look Dead - Talent: 3222321",
 icon = "Ability_Mage_TormentOfTheWeak",
 StepFunction = GSStaticPriority,
@@ -66,7 +66,7 @@ StepFunction = GSStaticPriority,
 
 Sequences['HP_OShit'] = {
 specID = 253,
-author = "John",
+author = "Sir_Ewing",
 helpTxt = "Oh Shit - Talent: 3222321",
 icon = "Ability_Hunter_MendPet",
 StepFunction = GSStaticPriority,
@@ -79,7 +79,7 @@ StepFunction = GSStaticPriority,
 
 Sequences['HP_BMburst'] = {
 specID = 253,
-author = "John",
+author = "Sir_Ewing",
 helpTxt = "BMAoE - Talent: 3222321",
 icon = "Ability_Hunter_KillCommand",
 StepFunction = GSStaticPriority,
@@ -104,7 +104,7 @@ PostMacro = [[
 
 Sequences['HP_Healpet'] = {
 specID = 253,
-author = "John",
+author = "Sir_Ewing",
 helpTxt = "Pet Heal - Talent: 3222321",
 StepFunction = GSStaticPriority,
 "/cast [nochanneling] !mend pet",
@@ -113,7 +113,7 @@ StepFunction = GSStaticPriority,
 
 Sequences['HP_BM2'] = {
 specID = 253,
-author = "John",
+author = "Sir_Ewing",
 helpTxt = "Without Barrage - Talent: 3222321",
 StepFunction = GSStaticPriority,
 PreMacro = [[
@@ -140,7 +140,7 @@ PostMacro = [[
 
 Sequences['HP_BM1'] = {
 specID = 253,
-author = "John",
+author = "Sir_Ewing",
 helpTxt = "With Barrage - Talent: 3222321",
 StepFunction = GSStaticPriority,
 PreMacro = [[

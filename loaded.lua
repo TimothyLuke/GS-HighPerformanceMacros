@@ -1,0 +1,3 @@
+local GNOME, _ = ...
+GSPrint("HP Macros loaded.  This set currently contains macros foe Enhancement Shaman, Fury Warrior and Beast Master Hunters.", GNOME)
+GSPrint("You can nominate other macros for this set at https://www.wowlazymacros.com", GNOME)

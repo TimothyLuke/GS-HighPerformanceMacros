@@ -1,4 +1,4 @@
-local Sequences = GSMasterSequences
+local GNOME, Sequences = ...
 
 ------------------
 ----- Mage

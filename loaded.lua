@@ -1,5 +1,6 @@
 local GNOME, Sequences = ...
 local modversion = GetAddOnMetadata(GNOME, "Version")
+local AceEvent = LibStub("AceEvent-3.0")
 
 GSPrint("HP Macros loaded.  This set currently contains macros for ", GNOME)
 GSPrint("  - Enhancement Shaman ", GNOME)
@@ -30,9 +31,4 @@ local function processAddonLoaded()
   end
 end
 
-local f = CreateFrame('Frame')
-f:SetScript('OnEvent', function(self, event, addon)
-  if event == 'ADDON_LOADED' and addon == "GS-Core" then
-    processAddonLoaded()
-  end
-end)
+AceEvent:RegisterMessage(GSStaticCoreLoadedMessage,  processAddonLoaded)

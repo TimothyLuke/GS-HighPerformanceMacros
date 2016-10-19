@@ -24,3 +24,42 @@ PreMacro=[[
 PostMacro=[[
 ]],
 }
+
+Sequences['HP_DFST'] = {
+author="John Metz",
+specID=251,
+helpTxt = "Talents: 2233213 - https://wowlazymacros.com/forums/topic/gs-ptr-dual-frost/page/7/#post-35102",
+StepFunction = GSStaticPriority,
+icon='INV_MISC_QUESTIONMARK',
+PreMacro=[[
+/cast [combat] Pillar of Frost
+]],
+"/cast !Frost Strike",
+"/castsequence  reset=combat  Obliterate, Frost Strike, Howling Blast",
+"/castsequence  reset=combat  Frostscythe, Frost Strike, Frost Strike, Obliterate, Howling Blast",
+"/castsequence  reset=combat  Glacial Advance",
+"/cast [combat] Empower Rune Weapon",
+PostMacro=[[
+/targetenemy [noharm][dead]
+]],
+}
+
+Sequences['HP_AOEDF'] = {
+author="John Metz",
+specID=251,
+helpTxt = "Talents: 2213213 - https://wowlazymacros.com/forums/topic/gs-ptr-dual-frost/page/7/#post-35102",
+StepFunction = GSStaticPriority,
+icon='INV_MISC_QUESTIONMARK',
+PreMacro=[[
+/cast [combat] Pillar of Frost
+]],
+"/cast !Frost Strike",
+"/castsequence  reset=combat  Frostscythe, Frost Strike, Howling Blast",
+"/castsequence  reset=combat  Obliterate, Frost Strike, Frost Strike, Frostscythe, Howling Blast",
+"/castsequence  reset=combat  Glacial Advance",
+"/cast [combat] Remorseless Winter",
+"/cast [combat] Empower Rune Weapon",
+PostMacro=[[
+/targetenemy [noharm][dead]
+]],
+}

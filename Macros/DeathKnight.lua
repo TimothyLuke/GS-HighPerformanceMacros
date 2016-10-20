@@ -63,3 +63,24 @@ PostMacro=[[
 /targetenemy [noharm][dead]
 ]],
 }
+
+Sequences["HP_SquishyDK"] = {
+specID = 250,
+author = "Suiseiseki",
+helpTxt = "Talents: 2112133",
+StepFunction = GSStaticPriority,
+PreMacro = [[
+/Cast [combat] Dancing Rune Weapon
+/cancelaura Wraith Walk
+]],
+"/cast [combat] Consumption",
+"/cast [combat] Blood Boil",
+"/cast Death Strike",
+'/castsequence reset=combat Marrowrend, Heart Strike, Heart Strike, Heart Strike, Heart Strike, Heart Strike, Marrowrend',
+"/castsequence reset=combat Death's Caress, null",
+"/castsequence reset=combat Marrowrend, Heart Strike, Heart Strike, Heart Strike, Heart Strike, Marrowrend",
+"/cast Death Strike",
+PostMacro = [[
+/TargetEnemy [noharm][dead]
+]],
+}

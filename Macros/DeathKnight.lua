@@ -6,7 +6,9 @@ local GNOME, Sequences = ...
 Sequences['HP_EX_Unholy'] = {
 author="Dohram and EnixLHQ",
 specID=252,
-helpTxt = "Talents: 122??33. Hold ALT for Death Strike.  See: https://wowlazymacros.com/forums/topic/unholy-soul-reaper/",
+version=14,
+source = "Local",
+helpTxt = "Talents: 222??13 - https://wowlazymacros.com/forums/topic/unholy-soul-reaper/",
 icon='INV_MISC_QUESTIONMARK',
 lang="enUS",
 PreMacro=[[
@@ -16,9 +18,9 @@ PreMacro=[[
 /castsequence  reset=combat  Outbreak, Festering Strike, Festering Strike, null
 ]],
 "/cast Dark Transformation",
-"/castsequence  reset=target  Festering Strike, Festering Strike, Scourge Strike, Scourge Strike",
-"/castsequence  reset=target  Outbreak, Festering Strike, Festering Strike, Soul Reaper, Scourge Strike, Scourge Strike",
 "/cast Apocalypse",
+"/castsequence  reset=target  Festering Strike, Festering Strike, Scourge Strike, Scourge Strike",
+"/castsequence  reset=target  Outbreak, Festering Strike, Festering Strike, Soul Reaper, Scourge Strike, Scourge Strike, scourge strike",
 "/cast Summon Gargoyle",
 "/cast Death Coil",
 PostMacro=[[

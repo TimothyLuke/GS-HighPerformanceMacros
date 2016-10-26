@@ -15,9 +15,11 @@ GSPrint("You can find help and also nominate other macros for this set at https:
 local KnownSequences = {}
 for k,_ in pairs(Sequences) do
   KnownSequences[k] = true
+  Sequences[k].source = GNOME
+  Sequences[k].authorversion = modversion
 end
 
-GSMasterSequences = Sequences
+GSImportLegacyMacroCollections(Sequences)
 
 local function processAddonLoaded()
   for k,_ in pairs(KnownSequences) do

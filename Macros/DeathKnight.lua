@@ -4,9 +4,10 @@ local GNOME, Sequences = ...
 ----- Death Knight
 ------------------
 Sequences['HP_EX_Unholy'] = {
-author="Dohram and EnixLHQ",
+author="EnixLHQ",
 specID=252,
-helpTxt = "Talents: 222??13 - https://wowlazymacros.com/forums/topic/unholy-soul-reaper/",
+version=24,
+helpTxt = "Talents: 121??33 - Run at 80ms - https://wowlazymacros.com/forums/topic/unholy-soul-reaper/",
 icon='INV_MISC_QUESTIONMARK',
 lang="enUS",
 PreMacro=[[
@@ -15,12 +16,14 @@ PreMacro=[[
 /use [mod:alt] Death Strike
 /castsequence  reset=combat  Outbreak, Festering Strike, Festering Strike, null
 ]],
-"/cast Dark Transformation",
 "/cast Apocalypse",
-"/castsequence  reset=target  Festering Strike, Festering Strike, Scourge Strike, Scourge Strike",
-"/castsequence  reset=target  Outbreak, Festering Strike, Festering Strike, Soul Reaper, Scourge Strike, Scourge Strike, scourge strike",
+"/cast Scourge Strike",
+"/castsequence Dark Transformation, Outbreak",
+"/castsequence  reset=target  Festering Strike, Festering Strike",
+"/castsequence  reset=target  Festering Strike, Festering Strike, Soul Reaper, Outbreak",
 "/cast Summon Gargoyle",
 "/cast Death Coil",
+"/cast Scourge Strike",
 PostMacro=[[
 ]],
 }

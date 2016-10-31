@@ -1,6 +1,6 @@
 local GNOME, Sequences = ...
 local modversion = GetAddOnMetadata(GNOME, "Version")
-local AceEvent = LibStub("AceEvent-3.0")
+local GSHP = LibStub("AceAddon-3.0"):NewAddon("GSHP", "AceEvent-3.0")
 GSWLMHPOptions = {}
 GSWLMHPOptions.warnupdate = false
 GSWLMHPOptions.currentversion = modversion
@@ -12,17 +12,19 @@ GSPrint("  - Beast Master Hunters", GNOME)
 GSPrint("  - Unholy , Blood and Frost Death Knights", GNOME)
 GSPrint("You can find help and also nominate other macros for this set at https://www.wowlazymacros.com", GNOME)
 
-local KnownSequences = {}
 for k,_ in pairs(Sequences) do
-  KnownSequences[k] = true
-  Sequences[k].source = GNOME
-  Sequences[k].authorversion = modversion
+  if GSisEmpty(Sequences[k].source) then
+    Sequences[k].source = GNOME
+  end
+  if GSisEmpty(Sequences[k].authorversion) then
+    Sequences[k].authorversion = modversion
+  end
 end
 
-GSImportLegacyMacroCollections(Sequences)
+GSImportMacroCollection(Sequences)
 
 local function processAddonLoaded()
-  for k,_ in pairs(KnownSequences) do
+  for k,_ in pairs(Sequences) do
     if GSMasterOptions.SequenceLibrary[k][GSGetActiveSequenceVersion(k)].source ~= GNOME then
       GSPrint("You have made edits to " .. k .. ".  If you have updated ".. GNOME .. " recently, there may be updates to version 1 of this macro.", GNOME)
     end
@@ -37,4 +39,4 @@ local function processAddonLoaded()
 
 end
 
-AceEvent:RegisterMessage(GSStaticCoreLoadedMessage,  processAddonLoaded)
+GSHP:RegisterMessage(GSStaticCoreLoadedMessage,  processAddonLoaded)

@@ -31,7 +31,7 @@ local function processAddonLoaded()
   end
   if GSWLMHPOptions.currentversion ~= modversion  then
     GSPrint("The HP Macros mod has been updated.  The following Macros may have been updated.  Please check your talents still match and any local modifications.", GNOME)
-    for k,_ in pairs(KnownSequences) do
+    for k,_ in pairs(Sequences) do
       GSPrint("  - ".. k, GNOME)
     end
     GSWLMHPOptions.currentversion = modversion

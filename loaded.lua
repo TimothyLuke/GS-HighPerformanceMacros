@@ -1,42 +1,30 @@
-local GNOME, Sequences = ...
-local modversion = GetAddOnMetadata(GNOME, "Version")
-local GSHP = LibStub("AceAddon-3.0"):NewAddon("GSHP", "AceEvent-3.0")
-GSWLMHPOptions = {}
-GSWLMHPOptions.warnupdate = false
-GSWLMHPOptions.currentversion = modversion
+local ModName, Sequences = ...
+local GSE = GSE
+local L = GSE.L
+local Statics = GSE.Static
+local GSEPlugin = LibStub("AceAddon-3.0"):NewAddon(ModName, "AceEvent-3.0")
 
-GSPrint("HP Macros loaded.  This set currently contains macros for ", GNOME)
-GSPrint("  - Enhancement Shaman ", GNOME)
-GSPrint("  - Fury Warriors", GNOME)
-GSPrint("  - Beast Master Hunters", GNOME)
-GSPrint("  - Unholy , Blood and Frost Death Knights", GNOME)
-GSPrint("You can find help and also nominate other macros for this set at https://www.wowlazymacros.com", GNOME)
+-- Quick and Nasty hack until I update all the macros to GSE 2
+for k,v in pairs(Sequences) do
+  Sequences[k] = GSE.ConvertLegacySequence(v)
+end
 
-for k,_ in pairs(Sequences) do
-  if GSisEmpty(Sequences[k].source) then
-    Sequences[k].source = GNOME
-  end
-  if GSisEmpty(Sequences[k].authorversion) then
-    Sequences[k].authorversion = modversion
+
+
+local function processAddonLoaded(event, arg)
+  if arg == ModName then
+    GSE.ImportMacroCollection(Library)
+    GSE.Print("HP Macros loaded.  This set currently contains macros for ", GNOME)
+    GSE.Print("  - Enhancement Shaman ", GNOME)
+    GSE.Print("  - Fury Warriors", GNOME)
+    GSE.Print("  - Beast Master Hunters", GNOME)
+    GSE.Print("  - Unholy , Blood and Frost Death Knights", GNOME)
+    GSE.Print("You can find help and also nominate other macros for this set at https://www.wowlazymacros.com", GNOME)
   end
 end
 
-GSImportMacroCollection(Sequences)
-
-local function processAddonLoaded()
-  for k,_ in pairs(Sequences) do
-    if GSMasterOptions.SequenceLibrary[k][GSGetActiveSequenceVersion(k)].source ~= GNOME then
-      GSPrint("You have made edits to " .. k .. ".  If you have updated ".. GNOME .. " recently, there may be updates to version 1 of this macro.", GNOME)
-    end
-  end
-  if GSWLMHPOptions.currentversion ~= modversion  then
-    GSPrint("The HP Macros mod has been updated.  The following Macros may have been updated.  Please check your talents still match and any local modifications.", GNOME)
-    for k,_ in pairs(Sequences) do
-      GSPrint("  - ".. k, GNOME)
-    end
-    GSWLMHPOptions.currentversion = modversion
-  end
-
+if GSE.RegisterAddon(ModName, GetAddOnMetadata(ModName, "Version"), GSE.GetSequenceNamesFromLibrary(library) then
+  processAddonLoaded("Load", ModName)
 end
 
-GSHP:RegisterMessage(GSStaticCoreLoadedMessage,  processAddonLoaded)
+GSEPlugin:RegisterMessage(Statics.ReloadMessage,  processAddonLoaded)

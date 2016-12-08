@@ -1,11 +1,10 @@
 ## Interface: 70100
-## Title: |cffff0000GS-E:|r |cFF00D1FFWLM High Performance Macros|r
-## Notes: These macros have been identified by the wowlazymacros.com community as High Performace Macros
+## Title: |cffff0000GS-E:|r |cFF00D1FFWLM High Performance Macros|r - Straight from GitHub
+## Notes: These macros have been identified by the wowlazymacros.com community as High Performace Macros.  This version has been loaded Direct from GitHub
 ## Author: TimothyLuke
-## Version: v1.6
-## SavedVariables: GSWLMHPOptions
-## RequiredDeps: GS-Core
-## LoadOnDemand: 1
+## Version: v2.0
+## RequiredDeps: GSE
+
 
 Macros\DeathKnight.lua
 Macros\Druid.lua

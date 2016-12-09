@@ -13,17 +13,17 @@ end
 
 local function processAddonLoaded(event, arg)
   if arg == ModName then
-    GSE.ImportMacroCollection(Library)
-    GSE.Print("HP Macros loaded.  This set currently contains macros for ", GNOME)
-    GSE.Print("  - Enhancement Shaman ", GNOME)
-    GSE.Print("  - Fury Warriors", GNOME)
-    GSE.Print("  - Beast Master Hunters", GNOME)
-    GSE.Print("  - Unholy , Blood and Frost Death Knights", GNOME)
-    GSE.Print("You can find help and also nominate other macros for this set at https://www.wowlazymacros.com", GNOME)
+    GSE.ImportMacroCollection(Sequences)
+    GSE.Print("HP Macros loaded.  This set currently contains macros for ", ModName)
+    GSE.Print("  - Enhancement Shaman ", ModName)
+    GSE.Print("  - Fury Warriors", ModName)
+    GSE.Print("  - Beast Master Hunters", ModName)
+    GSE.Print("  - Unholy , Blood and Frost Death Knights", ModName)
+    GSE.Print("You can find help and also nominate other macros for this set at https://www.wowlazymacros.com", ModName)
   end
 end
 
-if GSE.RegisterAddon(ModName, GetAddOnMetadata(ModName, "Version"), GSE.GetSequenceNamesFromLibrary(library)) then
+if GSE.RegisterAddon(ModName, GetAddOnMetadata(ModName, "Version"), GSE.GetSequenceNamesFromLibrary(Sequences)) then
   processAddonLoaded("Load", ModName)
 end
 

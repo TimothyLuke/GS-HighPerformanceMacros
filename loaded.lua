@@ -23,7 +23,7 @@ local function processAddonLoaded(event, arg)
   end
 end
 
-if GSE.RegisterAddon(ModName, GetAddOnMetadata(ModName, "Version"), GSE.GetSequenceNamesFromLibrary(library) then
+if GSE.RegisterAddon(ModName, GetAddOnMetadata(ModName, "Version"), GSE.GetSequenceNamesFromLibrary(library)) then
   processAddonLoaded("Load", ModName)
 end
 

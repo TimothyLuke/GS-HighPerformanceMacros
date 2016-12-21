@@ -4,13 +4,6 @@ local L = GSE.L
 local Statics = GSE.Static
 local GSEPlugin = LibStub("AceAddon-3.0"):NewAddon(ModName, "AceEvent-3.0")
 
--- Quick and Nasty hack until I update all the macros to GSE 2
-for k,v in pairs(Sequences) do
-  Sequences[k] = GSE.ConvertLegacySequence(v)
-end
-
-
-
 local function processAddonLoaded(event, arg)
   if arg == ModName then
     GSE.ImportMacroCollection(Sequences)

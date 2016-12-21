@@ -18,7 +18,7 @@ Sequences['HP_EX_Unholy'] = {
         "/cast [nopet,nomod] Raise Dead",
         "/use [mod:alt] Death Strike",
         "/castsequence  reset=combat  Outbreak, Festering Strike, Festering Strike, null",
-      }
+      },
       "/cast Apocalypse",
       "/cast Scourge Strike",
       "/castsequence Dark Transformation, Outbreak",
@@ -44,7 +44,7 @@ Sequences['HP_DFST'] = {
     [1] = {
       KeyPress={
         "/cast [combat] Pillar of Frost",
-      }
+      },
       "/cast !Frost Strike",
       "/castsequence  reset=combat  Obliterate, Frost Strike, Howling Blast",
       "/castsequence  reset=combat  Frostscythe, Frost Strike, Frost Strike, Obliterate, Howling Blast",
@@ -70,7 +70,7 @@ Sequences['HP_AOEDF'] = {
     [1] = {
       KeyPress={
         "/cast [combat] Pillar of Frost",
-      }
+      },
       "/cast !Frost Strike",
       "/castsequence  reset=combat  Frostscythe, Frost Strike, Howling Blast",
       "/castsequence  reset=combat  Obliterate, Frost Strike, Frost Strike, Frostscythe, Howling Blast",
@@ -96,7 +96,7 @@ Sequences["HP_SquishyDK"] = {
       KeyPress = {
         "/Cast [combat] Dancing Rune Weapon",
         "/cancelaura Wraith Walk"
-      }
+      },
       "/cast [combat] Consumption",
       "/cast [combat] Blood Boil",
       "/cast Death Strike",

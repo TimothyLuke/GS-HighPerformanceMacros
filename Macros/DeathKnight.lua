@@ -3,11 +3,11 @@ local _, Sequences = ...
 ------------------
 ----- Death Knight
 ------------------
-Sequences['HP_EX_Unholy'] = {
+Sequences['EX_Unholy_715'] = {
   Author="EnixLHQ",
   SpecID=252,
   Help="Run at 80ms",
-  Talents="1,2,1,?,?,3,3",
+  Talents="2,2,1,?,?,3,3",
   Helplinlk="https://wowlazymacros.com/forums/topic/unholy-soul-reaper/",
   Icon='INV_MISC_QUESTIONMARK',
   Default=1,
@@ -19,10 +19,10 @@ Sequences['HP_EX_Unholy'] = {
         "/use [mod:alt] Death Strike",
         "/castsequence  reset=combat  Outbreak, Festering Strike, Festering Strike, null",
       },
-      "/cast Apocalypse",
       "/cast Scourge Strike",
       "/castsequence Dark Transformation, Outbreak",
       "/castsequence  reset=target  Festering Strike, Festering Strike",
+      "/castsequence  reset=target  Festering Strike, Festering Strike, Apocalypse",
       "/castsequence  reset=target  Festering Strike, Festering Strike, Soul Reaper, Outbreak",
       "/cast Summon Gargoyle",
       "/cast Death Coil",

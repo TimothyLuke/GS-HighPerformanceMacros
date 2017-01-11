@@ -3,7 +3,7 @@ local _, Sequences = ...
 ------------------
 ----- Death Knight
 ------------------
-Sequences['EX_Unholy_715'] = {
+Sequences['HP_EX_Unholy_715'] = {
   Author="EnixLHQ",
   SpecID=252,
   Help="Run at 80ms",

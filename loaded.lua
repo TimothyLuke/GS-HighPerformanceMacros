@@ -1,5 +1,9 @@
 local ModName, Sequences = ...
 local GSE = GSE
+if GSE == nil then
+  print("This mod depends on GSE 2.0 or higher.")
+  return;
+end
 local L = GSE.L
 local Statics = GSE.Static
 local GSEPlugin = LibStub("AceAddon-3.0"):NewAddon(ModName, "AceEvent-3.0")

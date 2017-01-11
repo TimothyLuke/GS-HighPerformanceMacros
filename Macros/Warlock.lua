@@ -36,8 +36,8 @@ Sequences['HP_EX_Demo_715'] = {
   MacroVersions = {
     [1] = {
       KeyPress={
-        "/petautocastoff [group] Threatening Presence"
-        "/petautocaston [nogroup] Threatening Presence"
+        "/petautocastoff [group] Threatening Presence",
+        "/petautocaston [nogroup] Threatening Presence",
         "/targetenemy [noharm][dead]",
         "/cast [nopet][target=pet, dead] Summon Felguard",
         "/use [mod:alt] Drain Life",
@@ -65,8 +65,8 @@ Sequences['HP_EX_DemoAoE_715'] = {
   MacroVersions = {
     [1] = {
       KeyPress={
-        "/petautocastoff [group] Threatening Presence"
-        "/petautocaston [nogroup] Threatening Presence"
+        "/petautocastoff [group] Threatening Presence",
+        "/petautocaston [nogroup] Threatening Presence",
         "/targetenemy [noharm][dead]",
         "/cast [nopet][target=pet, dead] Summon Felguard",
         "/use [mod:alt] Drain Life",

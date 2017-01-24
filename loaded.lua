@@ -17,6 +17,7 @@ local function processAddonLoaded(event, arg)
     GSE.Print("  - Beast Master Hunters", ModName)
     GSE.Print("  - Unholy , Blood and Frost Death Knights", ModName)
     GSE.Print("  - Affliction and Demonology Warlock", ModName)
+    GSE.Print("  - Shadow Priest", ModName)
     GSE.Print("You can find help and also nominate other macros for this set at https://www.wowlazymacros.com", ModName)
   end
 end

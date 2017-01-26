@@ -15,7 +15,6 @@ Sequences['HP_EX_Unholy_715'] = {
     [1] = {
       KeyPress={
         "/targetenemy [noharm][dead]",
-        "/cast [nopet,nomod] Raise Dead",
         "/use [mod:alt] Death Strike",
         "/castsequence  reset=combat  Outbreak, Festering Strike, Festering Strike, null",
       },
@@ -30,6 +29,38 @@ Sequences['HP_EX_Unholy_715'] = {
     }
   }
 }
+
+
+Sequences['HP_EX_Unholy_Master'] = {
+  Author="Exaria@Perenolde",
+  SpecID=252,
+  Talents = "223??23",
+  Helplink = "https://wowlazymacros.com/forums/topic/unholy-soul-reaper-7-1-5/",
+  Help = "Mastery build - Run at 80ms or manually",
+  Default=1,
+  MacroVersions = {
+    [1] = {
+      StepFunction = [[Sequential]],
+      KeyPress={
+        "/targetenemy [noharm][dead]",
+        "/use [mod:alt] Death Strike",
+        "/castsequence  reset=combat  Outbreak, Festering Strike, Festering Strike, null",
+      },
+      PreMacro={
+      },
+        "/castsequence Festering Strike, Festering Strike, Apocalypse(artifact)",
+        "/castsequence Dark Transformation, Outbreak",
+        "/cast Soul Reaper",
+        "/castsequence  reset=combat  Festering Strike, Clawing Shadows, Clawing Shadows, Clawing Shadows, Clawing Shadows",
+        "/cast Death Coil",
+      PostMacro={
+      },
+      KeyRelease={
+      },
+    },
+  },
+}
+
 
 Sequences['HP_DFST'] = {
   Author="John Metz",

@@ -35,7 +35,6 @@ Sequences['HP_EX_Aff_ST'] = {
   },
 }
 
-
 Sequences['HP_EX_Aff_AoE'] = {
   Author="Exlynn@Perenolde",  
   SpecID=265,
@@ -66,7 +65,6 @@ Sequences['HP_EX_Aff_AoE'] = {
     },
   },
 }
-
 
 Sequences['HP_EX_Demo_ST'] = {
   Author="Exlynn@Perenolde",  
@@ -101,7 +99,6 @@ Sequences['HP_EX_Demo_ST'] = {
   },
 }
 
-
 Sequences['HP_EX_Demo_AoE'] = {
   Author="Exlynn@Perenolde",  
   SpecID=266,
@@ -132,4 +129,3 @@ Sequences['HP_EX_Demo_AoE'] = {
     },
   },
 }
-

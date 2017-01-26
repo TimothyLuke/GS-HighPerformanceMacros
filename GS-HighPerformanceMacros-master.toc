@@ -2,7 +2,7 @@
 ## Title: |cffff0000GS-E:|r |cFF00D1FFWLM High Performance Macros|r - Straight from GitHub
 ## Notes: These macros have been identified by the wowlazymacros.com community as High Performace Macros.  This version has been loaded Direct from GitHub
 ## Author: TimothyLuke
-## Version: GH v2.0.3
+## Version: 2.0.4
 ## RequiredDeps: GSE
 
 

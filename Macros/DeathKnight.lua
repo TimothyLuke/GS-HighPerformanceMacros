@@ -3,7 +3,7 @@ local _, Sequences = ...
 ------------------
 ----- Death Knight
 ------------------
-Sequences['EX_Unholy_Master'] = {
+Sequences['HP_EX_Unholy_M'] = {
 -- This Sequence was exported from GSE 2.0.14.
   Author="Exaria@Perenolde",
   SpecID=252,

@@ -3,35 +3,8 @@ local _, Sequences = ...
 ------------------
 ----- Death Knight
 ------------------
-Sequences['HP_EX_Unholy_715'] = {
-  Author="EnixLHQ",
-  SpecID=252,
-  Help="Run at 80ms",
-  Talents="2,2,1,?,?,3,3",
-  Helplinlk="https://wowlazymacros.com/forums/topic/unholy-soul-reaper/",
-  Icon='INV_MISC_QUESTIONMARK',
-  Default=1,
-  MacroVersions = {
-    [1] = {
-      KeyPress={
-        "/targetenemy [noharm][dead]",
-        "/use [mod:alt] Death Strike",
-        "/castsequence  reset=combat  Outbreak, Festering Strike, Festering Strike, null",
-      },
-      "/cast Scourge Strike",
-      "/castsequence Dark Transformation, Outbreak",
-      "/castsequence  reset=target  Festering Strike, Festering Strike",
-      "/castsequence  reset=target  Festering Strike, Festering Strike, Apocalypse",
-      "/castsequence  reset=target  Festering Strike, Festering Strike, Soul Reaper, Outbreak",
-      "/cast Summon Gargoyle",
-      "/cast Death Coil",
-      "/cast Scourge Strike",
-    }
-  }
-}
-
-
-Sequences['HP_EX_Unholy_Master'] = {
+Sequences['EX_Unholy_Master'] = {
+-- This Sequence was exported from GSE 2.0.14.
   Author="Exaria@Perenolde",
   SpecID=252,
   Talents = "223??23",
@@ -43,16 +16,17 @@ Sequences['HP_EX_Unholy_Master'] = {
       StepFunction = [[Sequential]],
       KeyPress={
         "/targetenemy [noharm][dead]",
-        "/use [mod:alt] Death Strike",
+        "/use [mod:ctrl] Death Strike",
+        "/use [mod:alt] Apocalypse(artifact)",
         "/castsequence  reset=combat  Outbreak, Festering Strike, Festering Strike, null",
       },
       PreMacro={
       },
-        "/castsequence Festering Strike, Festering Strike, Apocalypse(artifact)",
-        "/castsequence Dark Transformation, Outbreak",
-        "/cast Soul Reaper",
-        "/castsequence  reset=combat  Festering Strike, Clawing Shadows, Clawing Shadows, Clawing Shadows, Clawing Shadows",
+        "/castsequence  reset=target  Festering Strike, Clawing Shadows, Clawing Shadows, Festering Strike, Clawing Shadows, Clawing Shadows",
+        "/castsequence Dark Transformation, Festering Strike, Outbreak",
+        "/castsequence Soul Reaper, Clawing Shadows, Outbreak",
         "/cast Death Coil",
+        "/cast Summon Gargoyle",
       PostMacro={
       },
       KeyRelease={

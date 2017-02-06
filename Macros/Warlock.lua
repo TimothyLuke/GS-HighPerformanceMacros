@@ -4,7 +4,6 @@ local _, Sequences = ...
 ------------------
 
 Sequences['HP_EX_Aff_ST'] = {
--- This Sequence was exported from GSE 2.0.14.
   Author="Exlynn@Perenolde with help from Belthozar@Pozzo dell’Eternità",
   SpecID=265,
   Talents = "3,1,?,1,?,1,3",
@@ -38,7 +37,6 @@ Sequences['HP_EX_Aff_ST'] = {
 
 
 Sequences['HP_EX_Aff_AoE'] = {
--- This Sequence was exported from GSE 2.0.14.
   Author="Exlynn@Perenolde",
   SpecID=265,
   Talents = "3,1,?,1,?,1,3",
@@ -71,7 +69,6 @@ Sequences['HP_EX_Aff_AoE'] = {
 
 
 Sequences['HP_EX_Demo_ST'] = {
--- This Sequence was exported from GSE 2.0.14.
   Author="Exlynn@Perenolde",
   SpecID=266,
   Talents = "3,1,?,1,?,2,2",
@@ -107,7 +104,6 @@ Sequences['HP_EX_Demo_ST'] = {
 
 
 Sequences['HP_EX_Demo_AoE'] = {
--- This Sequence was exported from GSE 2.0.14.
   Author="Exlynn@Perenolde",
   SpecID=266,
   Talents = "3,1,?,1,?,2,2",

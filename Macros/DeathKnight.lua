@@ -4,15 +4,16 @@ local _, Sequences = ...
 ----- Death Knight
 ------------------
 Sequences['HP_EX_Unholy_M'] = {
+-- This Sequence was exported from GSE 2.1.00.
   Author="Exaria@Perenolde",
   SpecID=252,
   Talents = "223??23",
   Helplink = "https://wowlazymacros.com/forums/topic/unholy-soul-reaper-7-1-5/",
-  Help = "Mastery build - Run at 80ms or manually",
+  Help = [[Mastery build - Run at 80ms or manually]],
   Default=1,
   MacroVersions = {
     [1] = {
-      StepFunction = [[Sequential]],
+      StepFunction = "Sequential",
       KeyPress={
         "/targetenemy [noharm][dead]",
         "/use [mod:ctrl] Death Strike",
@@ -21,7 +22,7 @@ Sequences['HP_EX_Unholy_M'] = {
       },
       PreMacro={
       },
-        "/castsequence  reset=target  Festering Strike, Clawing Shadows, Clawing Shadows, Festering Strike, Clawing Shadows, Clawing Shadows",
+        "/castsequence  reset=target  Festering Strike, Clawing Shadows, Clawing Shadows, Clawing Shadows, Festering Strike, Clawing Shadows, Clawing Shadows",
         "/castsequence Dark Transformation, Festering Strike, Outbreak",
         "/castsequence Soul Reaper, Clawing Shadows, Outbreak",
         "/cast Death Coil",
@@ -33,7 +34,6 @@ Sequences['HP_EX_Unholy_M'] = {
     },
   },
 }
-
 
 Sequences['HP_DFST'] = {
   Author="John Metz",

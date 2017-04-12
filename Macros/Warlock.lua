@@ -3,24 +3,58 @@ local _, Sequences = ...
 ----- Warlock
 ------------------
 
-Sequences['HP_EX_Aff_ST'] = {
+Sequences['HP_EX_Aff_ST_Haste'] = {
+-- This Sequence was exported from GSE 2.1.00.
   Author="Exlynn@Perenolde with help from Belthozar@Pozzo dell’Eternità",
   SpecID=265,
-  Talents = "3,1,?,1,?,1,3",
+  Talents = "3,2,?,1,?,1,3",
   Helplink = "https://wowlazymacros.com/forums/topic/affliction-conduit-7-1-5/",
-  Help = "Single Target - Run at 80ms or manually",
+  Help = [[Single Target - Run at 80ms, 100ms, or manually - Requires 20% haste or higher]],
   Default=1,
   MacroVersions = {
     [1] = {
-      StepFunction = [[Sequential]],
+      StepFunction = "Sequential",
       KeyPress={
         "/targetenemy [noharm][dead]",
         "/use [mod:alt] Drain Soul",
-        "/castsequence  reset=target  Agony, Corruption, Siphon Life, null",
+        "/castsequence  reset=target  Corruption, Agony, Siphon Life, null",
       },
       PreMacro={
       },
-        "/castsequence [nochanneling] reset=combat/reset  Agony, Corruption, Siphon Life, Drain Soul, Life Tap",
+        "/castsequence [nochanneling] Agony, Siphon Life, Drain Soul, Life Tap, Agony",
+        "/cast [nochanneling] Unstable Affliction",
+        "/castsequence [nochanneling] Unstable Affliction, Drain Soul, Drain Soul, Reap Souls",
+      PostMacro={
+      },
+      KeyRelease={
+        "/petautocastoff [group] Seethe",
+        "/petautocastoff [group] Burning Presence",
+        "/petautocaston [nogroup] Seethe",
+        "/petautocaston [nogroup] Burning Presence",
+      },
+    },
+  },
+}
+ 
+Sequences['HP_EX_Aff_ST'] = {
+-- This Sequence was exported from GSE 2.1.00.
+  Author="Exlynn@Perenolde with help from Belthozar@Pozzo dell’Eternità",
+  SpecID=265,
+  Talents = "3,2,?,1,?,1,3",
+  Helplink = "https://wowlazymacros.com/forums/topic/affliction-conduit-7-1-5/",
+  Help = [[Single Target - Run at 80ms, 100ms, or manually - Use if less than 20% haste]],
+  Default=1,
+  MacroVersions = {
+    [1] = {
+      StepFunction = "Sequential",
+      KeyPress={
+        "/targetenemy [noharm][dead]",
+        "/use [mod:alt] Drain Soul",
+        "/castsequence  reset=target  Corruption, Agony, Siphon Life, null",
+      },
+      PreMacro={
+      },
+        "/castsequence [nochanneling] Agony, Siphon Life, Drain Soul, Life Tap, Agony",
         "/cast [nochanneling] Unstable Affliction",
         "/castsequence [nochanneling] Unstable Affliction, Drain Soul, Reap Souls",
       PostMacro={
@@ -34,9 +68,9 @@ Sequences['HP_EX_Aff_ST'] = {
     },
   },
 }
-
-
+ 
 Sequences['HP_EX_Aff_AoE'] = {
+-- This Sequence was exported from GSE 2.0.14.
   Author="Exlynn@Perenolde",
   SpecID=265,
   Talents = "3,1,?,1,?,1,3",

@@ -3,29 +3,33 @@ local _, Sequences = ...
 ------------------
 ----- Death Knight
 ------------------
-Sequences['HP_EX_Unholy_M'] = {
-  Author="Exaria@Perenolde",
+Sequences['HP_EX_Unholy_Apoc'] = {
+-- This Sequence was exported from GSE 2.1.00.
+  Author="Exaria@Perenolde and John Metz",
   SpecID=252,
-  Talents = "223??23",
+  Talents = "321??33",
   Helplink = "https://wowlazymacros.com/forums/topic/unholy-soul-reaper-7-1-5/",
-  Help = [[Mastery build - Run at 80ms or manually]],
+  Help = [[Run at 80ms or manually. Hold ALT for Apocalypse at 6+ Wounds.
+In collaboration with the amazing John Metz!]],
   Default=1,
+  Icon='Spell_Deathknight_UnholyPresence',
   MacroVersions = {
     [1] = {
       StepFunction = "Sequential",
       KeyPress={
         "/targetenemy [noharm][dead]",
-        "/use [mod:ctrl] Death Strike",
         "/use [mod:alt] Apocalypse(artifact)",
-        "/castsequence  reset=combat  Outbreak, Festering Strike, Festering Strike, null",
+        "/castsequence  reset=target  Outbreak, null",
       },
       PreMacro={
       },
-        "/castsequence  reset=target  Festering Strike, Clawing Shadows, Clawing Shadows, Clawing Shadows, Festering Strike, Clawing Shadows, Clawing Shadows",
-        "/castsequence Dark Transformation, Festering Strike, Outbreak",
-        "/castsequence Soul Reaper, Clawing Shadows, Outbreak",
-        "/cast Death Coil",
-        "/cast Summon Gargoyle",
+        "/use [nopet,combat] Raise Dead; Dark Transformation",
+        "/cast [combat] Summon Gargoyle",
+        "/castsequence  reset=combat  Festering Strike, Soul Reaper, Scourge Strike, Scourge Strike, Death Coil, Outbreak",
+        "/castsequence  reset=combat  Festering Strike, Death Coil, Scourge Strike, Scourge Strike, Death Coil, Death Coil, Outbreak",
+        "/castsequence  reset=combat  Festering Strike, Scourge Strike, Death Coil",
+        "/cast [combat] Scourge Strike",
+        "/cast [combat] Death Coil",
       PostMacro={
       },
       KeyRelease={

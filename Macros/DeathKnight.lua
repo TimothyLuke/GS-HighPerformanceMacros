@@ -4,7 +4,6 @@ local _, Sequences = ...
 ----- Death Knight
 ------------------
 Sequences['HP_EX_Unholy_Apoc'] = {
--- This Sequence was exported from GSE 2.1.00.
   Author="Exaria@Perenolde and John Metz",
   SpecID=252,
   Talents = "321??33",

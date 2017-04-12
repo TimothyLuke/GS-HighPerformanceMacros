@@ -35,7 +35,7 @@ Sequences['HP_EX_Aff_ST_Haste'] = {
     },
   },
 }
- 
+
 Sequences['HP_EX_Aff_ST'] = {
 -- This Sequence was exported from GSE 2.1.00.
   Author="Exlynn@Perenolde with help from Belthozar@Pozzo dell’Eternità",
@@ -68,7 +68,7 @@ Sequences['HP_EX_Aff_ST'] = {
     },
   },
 }
- 
+
 Sequences['HP_EX_Aff_AoE'] = {
 -- This Sequence was exported from GSE 2.0.14.
   Author="Exlynn@Perenolde",

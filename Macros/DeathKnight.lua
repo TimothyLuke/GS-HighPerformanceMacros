@@ -3,12 +3,47 @@ local _, Sequences = ...
 ------------------
 ----- Death Knight
 ------------------
+Sequences['HP_EX_Unholy_ApocCS'] = {
+  Author="Exaria@Perenolde and John Metz",
+  SpecID=252,
+  Talents = "3,2,3,?,?,3,3",
+  Helplink = "https://wowlazymacros.com/forums/topic/unholy-soul-reaper-7-1-5/",
+  Help = [[Mastery build. Run at 80ms, 100ms, or manually. Hold ALT for Apocalypse at 6+ Wounds.
+In collaboration with the amazing John Metz!]],
+  Default=1,
+  Icon='Spell_Deathknight_UnholyPresence',
+  MacroVersions = {
+    [1] = {
+      StepFunction = "Sequential",
+      KeyPress={
+        "/targetenemy [noharm][dead]",
+        "/use [mod:alt] Apocalypse(artifact)",
+        "/castsequence  reset=target  Outbreak, null",
+      },
+      PreMacro={
+      },
+        "/use [nopet,combat] Raise Dead; Dark Transformation",
+        "/cast [combat] Summon Gargoyle",
+        "/cast [combat] Festering Strike",
+        "/castsequence  reset=combat  Festering Strike, Soul Reaper, Clawing Shadows, Clawing Shadows, Death Coil, Outbreak",
+        "/castsequence  reset=combat  Festering Strike, Death Coil, Clawing Shadows, Clawing Shadows, Death Coil, Death Coil, Outbreak",
+        "/castsequence  reset=combat  Outbreak, Festering Strike, Clawing Shadows, Death Coil",
+        "/cast [combat] Clawing Shadows",
+        "/cast [combat] Death Coil",
+      PostMacro={
+      },
+      KeyRelease={
+      },
+    },
+  },
+}
+
 Sequences['HP_EX_Unholy_Apoc'] = {
   Author="Exaria@Perenolde and John Metz",
   SpecID=252,
   Talents = "321??33",
   Helplink = "https://wowlazymacros.com/forums/topic/unholy-soul-reaper-7-1-5/",
-  Help = [[Run at 80ms or manually. Hold ALT for Apocalypse at 6+ Wounds.
+  Help = [[Critical Strike build. Run at 80ms or manually. Hold ALT for Apocalypse at 6+ Wounds.
 In collaboration with the amazing John Metz!]],
   Default=1,
   Icon='Spell_Deathknight_UnholyPresence',

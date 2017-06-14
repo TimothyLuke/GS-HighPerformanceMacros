@@ -19,6 +19,9 @@ local function processAddonLoaded(event, arg)
     GSE.Print("  - Affliction and Demonology Warlock", ModName)
     GSE.Print("  - Shadow Priest", ModName)
     GSE.Print("You can find help and also nominate other macros for this set at https://www.wowlazymacros.com", ModName)
+    if GSE.GetCurrentSpecID () == 253 then
+      GSE.Print("Note: The Beast Master hunter macros have been updated.  A number of macros have been consolidated into the HP_TBMain and HP_TBAOE macros.", ModName)
+    end
   end
 end
 

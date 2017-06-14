@@ -3,307 +3,266 @@ local _, Sequences = ...
 ------------------
 ----- Hunter
 ------------------
-Sequences['HP_RBMAoE'] = {
-  SpecID = 253,
-  Author = "Sir_Ewing",
-  Help = "Raiding AoE - Talent: 3212233",
-  Talents="3,2,1,2,2,3,3",
-  StepFunction = "Priority",
+Sequences['HP_Healpet'] = {
+  Author="Sir-Ewing",
+  Helplink = "https://wowlazymacros.com/forums/topic/max-artifact-with-mantle-of-command-and-the-apex-predators-claw/",
+  SpecID=253,
+  Talents = "???????",
+  Help = [[Pet Heal - Talent: 3212311]],
   Default=1,
   MacroVersions = {
     [1] = {
-      KeyPress = {
-        "/targetenemy [noharm][dead]",
-        "/startattack",
-        "/petattack [@target,harm]",
-        "/petautocastoff [group] Growl",
-        "/petautocaston [nogroup] Growl",
-        "/cast [target=focus, exists, nodead],[target=pet, exists, nodead] Misdirection",
+      StepFunction = "Sequential",
+      KeyPress={
       },
-      "/cast [nochanneling] Bestial Wrath",
-      "/cast [nochanneling] !Kill Command",
-      "/cast [nochanneling] Dire Frenzy",
-      "/cast [nochanneling] Multi-Shot",
-      "/cast [nochanneling] Titan's Thunder",
-      "/cast [nochanneling] !Kill Command",
-      "/cast [nochanneling] Bestial Wrath",
-      KeyRelease = {
-        "/cast Aspect of the Wild",
+      PreMacro={
       },
-    }
-  }
-}
-
-Sequences['HP_RBMmain'] = {
-  SpecID = 253,
-  Author = "Sir_Ewing",
-  Help = "Raiding main With Barrage- Talent: 3212223",
-  Talents="3,2,1,2,2,2,3",
-  Default=1,
-  MacroVersions = {
-    [1] = {
-      KeyPress = {
-        "/cast [@pet,dead]Heart of the Phoenix",
-        "/petautocastoff [group] Growl",
-        "/petautocaston [nogroup] Growl",
-        "/cast [target=focus, exists, nodead],[target=pet, exists, nodead] Misdirection",
+        "/cast [@pet,dead] Revive Pet",
+        "/cast [nochanneling] Revive Pet",
+        "/cast [nochanneling] Exhilaration",
+      PostMacro={
       },
-      "/cast [nochanneling] Bestial Wrath",
-      "/cast [nochanneling] !Kill Command",
-      "/cast [nochanneling] Dire Frenzy",
-      "/cast Barrage",
-      "/cast [nochanneling] Concussive Shot",
-      "/cast [nochanneling] Cobra Shot",
-      "/cast [nochanneling] Titan's Thunder",
-      "/cast [nochanneling] !Kill Command",
-      "/cast [nochanneling] Bestial Wrath",
-      KeyRelease = {
-        "/cast Aspect of the Wild",
+      KeyRelease={
       },
-    }
-  }
+    },
+  },
 }
 
 Sequences['HP_lookdead'] = {
-  SpecID = 253,
-  Author = "Sir_Ewing",
-  Help = "Look Dead - Talent: 3222321",
-  Talents="3,2,1,2,2,2,3",
+  Author="Sir_Ewing",
+  Helplink = "https://wowlazymacros.com/forums/topic/max-artifact-with-mantle-of-command-and-the-apex-predators-claw/",
+  SpecID=253,
+  Talents = "???????",
+  Help = [[Look Dead ]],
   Default=1,
   MacroVersions = {
     [1] = {
-      "/cast [nochanneling] Feign Death",
-      "/cast [nochanneling] Play Dead",
-    }
-  }
+      StepFunction = "Sequential",
+      KeyPress={
+      },
+      PreMacro={
+      },
+        "/cast [nochanneling] Play Dead",
+        "/cast [nochanneling] Feign Death",
+      PostMacro={
+      },
+      KeyRelease={
+      },
+    },
+  },
 }
 
 Sequences['HP_OShit'] = {
   SpecID = 253,
-  Author = "Sir_Ewing",
-  Help = "Oh Shit - Talent: 3222321",
-  Talents="3,2,1,2,2,2,3",
+  Helplink = "https://wowlazymacros.com/forums/topic/max-artifact-with-mantle-of-command-and-the-apex-predators-claw/",
+  Author="Ewing@Scarlet Crusade",
+  SpecID=253,
+  Talents = "???????",
+  Help = [I am about to die],
   Default=1,
   MacroVersions = {
     [1] = {
-      "/cast Aspect of the Turtle",
-      "/cast [target=player, help] Spirit Mend",
-      "/cast [nochanneling] Exhilaration",
-      "/cast [nochanneling] !mend pet",
-      "/use Healing Tonic",
-    }
-  }
+      StepFunction = "Sequential",
+      KeyPress={
+      },
+      PreMacro={
+      },
+        "/cast Aspect of the Turtle",
+        "/cast [target=player, help] Spirit Mend",
+        "/cast [nochanneling] Exhilaration",
+        "/cast [nochanneling] Revive Pet",
+        "/use 0 2",
+        "/use 0 9",
+      PostMacro={
+      },
+      KeyRelease={
+      },
+    },
+  },
 }
 
-Sequences['HP_BMburst'] = {
-  SpecID = 253,
-  Author = "Sir_Ewing",
-  Help = "BMAoE - Talent: 3222321",
-  Talents="3,2,1,2,2,2,3",
+
+Sequences['HP_TBMAOE'] = {
+  Author="Ewing@Scarlet Crusade",
+  Helplink = "https://wowlazymacros.com/forums/topic/max-artifact-with-mantle-of-command-and-the-apex-predators-claw/",
+  SpecID=253,
+  Talents = "2232312",
+  Help = [[Tater based AoE]],
   Default=1,
+  Raid=2,
+  PVP=3,
+  Dungeon=2,
+  Heroic=2,
+  Mythic=2,
   MacroVersions = {
     [1] = {
-      KeyPress = {
-        "/cast [@pet,dead]Heart of the Phoenix",
+      StepFunction = "Sequential",
+      KeyPress={
+        "/targetenemy [noharm][dead]",
+        "/cast [@pet,dead] Heart of the Phoenix",
         "/petautocastoff [group] Growl",
         "/petautocaston [nogroup] Growl",
         "/cast [target=focus, exists, nodead],[target=pet, exists, nodead] Misdirection",
-      },
-      "/cast [nochanneling] Bestial Wrath",
-      "/cast [nochanneling] Stampede",
-      "/cast [nochanneling] Intimidation",
-      "/cast Barrage",
-      "/cast [nochanneling] Multi-Shot",
-      "/cast [nochanneling] Titan's Thunder",
-      KeyRelease = {
+        "/cast Intimidation",
+        "/cast [combat] Bestial Wrath",
+        "/cast Titan's Thunder",
         "/cast Aspect of the Wild",
       },
-    }
-  }
-}
-
-Sequences['HP_Healpet'] = {
-  SpecID = 253,
-  Author = "Sir-Ewing",
-  Help = "Pet Heal - Talent: 3222321",
-  Talents="3,2,1,2,2,2,3",
-  Default=1,
-  MacroVersions = {
-    [1] = {
-      "/cast [@pet,dead]Revive Pet",
-      "/cast [nochanneling] !mend pet",
-      "/cast [nochanneling] Exhilaration",
-    }
-  }
-}
-
-Sequences['HP_BM2'] = {
-  SpecID = 253,
-  Author = "Sir_Ewing",
-  Help = "Without Barrage - Talent: 3222321",
-  Talents="3,2,2,2,3,2,1",
-  Default=1,
-  MacroVersions = {
-    [1] = {
-      KeyPress = {
-        "/cast [@pet,dead]Heart of the Phoenix",
+      PreMacro={
+      },
+        "/cast Dire Frenzy",
+        "/cast A Murder of Crows",
+        "/cast Kill Command",
+        "/cast Multi-Shot",
+        "/castsequence [nochanneling] reset=combat/reset  Kill Command, Multi-Shot",
+        "/cast Dire Frenzy",
+      PostMacro={
+      },
+      KeyRelease={
+      },
+    },
+    [2] = {
+      StepFunction = "Sequential",
+      KeyPress={
+        "/targetenemy [noharm][dead]",
+        "/cast [@pet,dead] Heart of the Phoenix",
         "/petautocastoff [group] Growl",
         "/petautocaston [nogroup] Growl",
         "/cast [target=focus, exists, nodead],[target=pet, exists, nodead] Misdirection",
-      },
-      "/cast [nochanneling] Bestial Wrath",
-      "/cast [nochanneling] !Kill Command",
-      "/cast [nochanneling] Dire Frenzy",
-      "/cast [nochanneling] Intimidation",
-      "/cast [nochanneling] Cobra Shot",
-      "/cast [nochanneling] Concussive Shot",
-      "/cast [nochanneling] Titan's Thunder",
-      "/cast [nochanneling] !Kill Command",
-      "/cast [nochanneling] Bestial Wrath",
-      KeyRelease = {
+        "/cast [combat] Bestial Wrath",
+        "/cast Titan's Thunder",
         "/cast Aspect of the Wild",
       },
-    }
-  }
-}
-
-Sequences['HP_BM1'] = {
-  SpecID = 253,
-  Author = "Sir_Ewing",
-  Help = "With Barrage - Talent: 3222321",
-  Talents="3,2,2,2,3,2,1",
-  Default=1,
-  MacroVersions = {
-    [1] = {
-      KeyPress = {
-        "/cast [@pet,dead]Heart of the Phoenix",
+      PreMacro={
+      },
+        "/cast Dire Frenzy",
+        "/cast A Murder of Crows",
+        "/cast Kill Command",
+        "/cast Multi-Shot",
+        "/castsequence [nochanneling] reset=combat/reset  Kill Command, Multi-Shot",
+        "/cast Dire Frenzy",
+      PostMacro={
+      },
+      KeyRelease={
+      },
+    },
+    [3] = {
+      StepFunction = "Sequential",
+      KeyPress={
+        "/targetenemy [noharm][dead]",
+        "/cast [@pet,dead] Heart of the Phoenix",
         "/petautocastoff [group] Growl",
         "/petautocaston [nogroup] Growl",
         "/cast [target=focus, exists, nodead],[target=pet, exists, nodead] Misdirection",
-      },
-      "/cast [nochanneling] Bestial Wrath",
-      "/cast [nochanneling] !Kill Command",
-      "/cast [nochanneling] Intimidation",
-      "/cast [nochanneling] Dire Frenzy",
-      "/cast Barrage",
-      "/cast [nochanneling] Titan's Thunder",
-      "/cast [nochanneling] !Kill Command",
-      "/cast [nochanneling] Bestial Wrath",
-    }
-  }
-}
-
-Sequences['HP_2RSBM'] = {
-  SpecID = 253,
-  Author = "Sir_Ewing",
-  Help = "2nd Raiding Single without Barrage- Talent: 3212223",
-  Talents="3,2,1,2,2,2,3",
-  Default=1,
-  MacroVersions = {
-    [1] = {
-      KeyPress = {
-        "/cast [@pet,dead]Heart of the Phoenix",
-        "/petautocastoff [group] Growl",
-        "/petautocaston [nogroup] Growl",
-        "/cast [target=focus, exists, nodead],[target=pet, exists, nodead] Misdirection",
-      },
-      "/cast [nochanneling] Bestial Wrath",
-      "/cast [nochanneling] !Kill Command",
-      "/cast [nochanneling] Dire Frenzy",
-      "/cast [nochanneling] Concussive Shot",
-      "/cast [nochanneling] Cobra Shot",
-      "/cast [nochanneling] Titan's Thunder",
-      "/cast [nochanneling] !Kill Command",
-      "/cast [nochanneling] Bestial Wrath",
-      KeyRelease = {
-        "/cast Aspect of the Wild"
-      }
-    }
-  }
-}
-
-Sequences['HP_2RBMAoE'] = {
-  SpecID = 253,
-  Author = "Sir_Ewing",
-  Help = "2nd Raiding AoE with Barrage- Talent: 3212223",
-  Talents="3,2,1,2,2,2,3",
-  Default=1,
-  MacroVersions = {
-    [1] = {
-      KeyPress = {
-        "/cast [@pet,dead]Heart of the Phoenix",
-        "/petautocastoff [group] Growl",
-        "/petautocaston [nogroup] Growl",
-        "/cast [target=focus, exists, nodead],[target=pet, exists, nodead] Misdirection"
-      },
-      "/cast [nochanneling] Bestial Wrath",
-      "/cast [nochanneling] !Kill Command",
-      "/cast [nochanneling] Dire Frenzy",
-      "/cast Barrage",
-      "/cast [nochanneling] Multi-Shot",
-      "/cast [nochanneling] Titan's Thunder",
-      "/cast [nochanneling] !Kill Command",
-      "/cast [nochanneling] Bestial Wrath",
-      KeyRelease = {
+        "/cast Intimidation",
+        "/cast [combat] Bestial Wrath",
+        "/cast Titan's Thunder",
         "/cast Aspect of the Wild",
-      }
-    }
-  }
+      },
+      PreMacro={
+      },
+        "/cast Viper Sting",
+        "/cast Dire Frenzy",
+        "/cast A Murder of Crows",
+        "/cast Kill Command",
+        "/cast Multi-Shot",
+        "/castsequence [nochanneling] reset=combat/reset  Kill Command, Multi-Shot",
+        "/cast Dire Frenzy",
+      PostMacro={
+      },
+      KeyRelease={
+      },
+    },
+  },
 }
 
-Sequences['HP_SBMmain'] = {
-  SpecID = 253,
-  Author = "Sir_Ewing",
-  Help = "Solo main - Talent: 3212333",
-  Talents="3,2,1,2,3,3,3",
+Sequences['HP_TBMmain'] = {
+  Author="Ewing@Scarlet Crusade",
+  SpecID=253,
+  Talents = "2232312",
+  Help = [[Tater based High DPS]],
+  Helplink = "https://wowlazymacros.com/forums/topic/max-artifact-with-mantle-of-command-and-the-apex-predators-claw/",
   Default=1,
+  Raid=2,
+  PVP=3,
+  Dungeon=2,
+  Heroic=2,
+  Mythic=2,
   MacroVersions = {
     [1] = {
-      KeyPress = {
-        "/cast [@pet,dead]Heart of the Phoenix",
+      StepFunction = "Sequential",
+      KeyPress={
+        "/targetenemy [noharm][dead]",
+        "/cast [@pet,dead] Heart of the Phoenix",
         "/petautocastoff [group] Growl",
         "/petautocaston [nogroup] Growl",
         "/cast [target=focus, exists, nodead],[target=pet, exists, nodead] Misdirection",
-      },
-      "/cast [nochanneling] Bestial Wrath",
-      "/cast [nochanneling] !Kill Command",
-      "/cast [nochanneling] Dire Frenzy",
-      "/cast [nochanneling] Concussive Shot",
-      "/cast [nochanneling] Cobra Shot",
-      "/cast [nochanneling] Titan's Thunder",
-      "/cast [nochanneling] !Kill Command",
-      "/cast [nochanneling] Bestial Wrath",
-      KeyRelease = {
+        "/cast Intimidation",
+        "/cast [combat] Bestial Wrath",
+        "/cast Titan's Thunder",
         "/cast Aspect of the Wild",
-      }
-    }
-  }
-}
-
-Sequences['HP_SAoE'] = {
-  SpecID = 253,
-  Author = "Sir_Ewing",
-  Help = "Raiding AoE - Talent: 3212233",
-  Talents="3,2,1,2,2,2,3",
-  Default=1,
-  MacroVersions = {
-    [1] = {
-      KeyPress = {
-        "/cast [@pet,dead]Heart of the Phoenix",
+      },
+      PreMacro={
+      },
+        "/cast Dire Frenzy",
+        "/cast [nochanneling] Kill Command",
+        "/cast A Murder of Crows",
+        "/castsequence [nochanneling] reset=combat/reset  Kill Command, Cobra Shot",
+        "/cast Dire Frenzy",
+      PostMacro={
+      },
+      KeyRelease={
+      },
+    },
+    [2] = {
+      StepFunction = "Sequential",
+      KeyPress={
+        "/targetenemy [noharm][dead]",
+        "/cast [@pet,dead] Heart of the Phoenix",
         "/petautocastoff [group] Growl",
         "/petautocaston [nogroup] Growl",
         "/cast [target=focus, exists, nodead],[target=pet, exists, nodead] Misdirection",
+        "/cast [combat] Bestial Wrath",
+        "/cast Titan's Thunder",
+        "/cast Aspect of the Wild",
       },
-      "/cast [nochanneling] Bestial Wrath",
-      "/cast [nochanneling] !Kill Command",
-      "/cast [nochanneling] Dire Frenzy",
-      "/cast [nochanneling] Multi-Shot",
-      "/cast [nochanneling] Titan's Thunder",
-      "/cast [nochanneling] !Kill Command",
-      "/cast [nochanneling] Bestial Wrath",
-      KeyRelease = {
-        "/cast Aspect of the Wild"
-      }
-    }
-  }
+      PreMacro={
+      },
+        "/cast Dire Frenzy",
+        "/cast [nochanneling] Kill Command",
+        "/cast A Murder of Crows",
+        "/castsequence [nochanneling] reset=combat/reset  Kill Command, Cobra Shot",
+        "/cast Dire Frenzy",
+      PostMacro={
+      },
+      KeyRelease={
+      },
+    },
+    [3] = {
+      StepFunction = "Sequential",
+      KeyPress={
+        "/targetenemy [noharm][dead]",
+        "/cast [@pet,dead] Heart of the Phoenix",
+        "/petautocastoff [group] Growl",
+        "/petautocaston [nogroup] Growl",
+        "/cast [target=focus, exists, nodead],[target=pet, exists, nodead] Misdirection",
+        "/cast Intimidation",
+        "/cast [combat] Bestial Wrath",
+        "/cast Titan's Thunder",
+        "/cast Aspect of the Wild",
+      },
+      PreMacro={
+      },
+        "/cast Viper Sting",
+        "/cast Dire Frenzy",
+        "/cast [nochanneling] Kill Command",
+        "/cast A Murder of Crows",
+        "/castsequence [nochanneling] reset=combat/reset  Kill Command, Cobra Shot",
+        "/cast Dire Frenzy",
+      PostMacro={
+      },
+      KeyRelease={
+      },
+    },
+  },
 }

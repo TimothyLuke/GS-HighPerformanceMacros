@@ -3,64 +3,34 @@ local _, Sequences = ...
 ------------------
 ----- Death Knight
 ------------------
-Sequences['HP_EX_Unholy_ApocCS'] = {
-  Author="Exaria@Perenolde and John Metz",
+Sequences['EX_Unholy_DA'] = {
+  Author="EnixLHQ and John Metz",
   SpecID=252,
-  Talents = "3,2,3,?,?,3,3",
+  Talents = "3211331",
   Helplink = "https://wowlazymacros.com/forums/topic/unholy-soul-reaper-7-1-5/",
-  Help = [[Mastery build. Run at 80ms, 100ms, or manually. Hold ALT for Apocalypse at 6+ Wounds.
+  Help = [[Run at 80ms, 100ms, or manually. Hold ALT for Apocalypse at 6+ wounds, SHIFT for Death Coils
 In collaboration with the amazing John Metz!]],
   Default=1,
   Icon='Spell_Deathknight_UnholyPresence',
   MacroVersions = {
     [1] = {
       StepFunction = "Sequential",
+      LoopLimit=2,
       KeyPress={
         "/targetenemy [noharm][dead]",
         "/use [mod:alt] Apocalypse(artifact)",
+        "/cast [mod:shift] Death Coil",
         "/castsequence  reset=target  Outbreak, null",
       },
       PreMacro={
+        "/cast outbreak",
       },
         "/use [nopet,combat] Raise Dead; Dark Transformation",
         "/cast [combat] Summon Gargoyle",
         "/cast [combat] Festering Strike",
-        "/castsequence  reset=combat  Festering Strike, Soul Reaper, Clawing Shadows, Clawing Shadows, Death Coil, Outbreak",
-        "/castsequence  reset=combat  Festering Strike, Death Coil, Clawing Shadows, Clawing Shadows, Death Coil, Death Coil, Outbreak",
-        "/castsequence  reset=combat  Outbreak, Festering Strike, Clawing Shadows, Death Coil",
-        "/cast [combat] Clawing Shadows",
-        "/cast [combat] Death Coil",
-      PostMacro={
-      },
-      KeyRelease={
-      },
-    },
-  },
-}
-
-Sequences['HP_EX_Unholy_Apoc'] = {
-  Author="Exaria@Perenolde and John Metz",
-  SpecID=252,
-  Talents = "321??33",
-  Helplink = "https://wowlazymacros.com/forums/topic/unholy-soul-reaper-7-1-5/",
-  Help = [[Critical Strike build. Run at 80ms or manually. Hold ALT for Apocalypse at 6+ Wounds.
-In collaboration with the amazing John Metz!]],
-  Default=1,
-  Icon='Spell_Deathknight_UnholyPresence',
-  MacroVersions = {
-    [1] = {
-      StepFunction = "Sequential",
-      KeyPress={
-        "/targetenemy [noharm][dead]",
-        "/use [mod:alt] Apocalypse(artifact)",
-        "/castsequence  reset=target  Outbreak, null",
-      },
-      PreMacro={
-      },
-        "/use [nopet,combat] Raise Dead; Dark Transformation",
-        "/cast [combat] Summon Gargoyle",
-        "/castsequence  reset=combat  Festering Strike, Soul Reaper, Scourge Strike, Scourge Strike, Death Coil, Outbreak",
-        "/castsequence  reset=combat  Festering Strike, Death Coil, Scourge Strike, Scourge Strike, Death Coil, Death Coil, Outbreak",
+        "/cast [@player] Death and Decay",
+        "/castsequence  reset=combat  Festering Strike, Soul Reaper, Scourge Strike, Scourge Strike, Death Coil",
+        "/castsequence  reset=combat  Festering Strike, Death Coil, Scourge Strike, Scourge Strike, Death Coil, Death Coil",
         "/castsequence  reset=combat  Festering Strike, Scourge Strike, Death Coil",
         "/cast [combat] Scourge Strike",
         "/cast [combat] Death Coil",
@@ -125,29 +95,38 @@ Sequences['HP_AOEDF'] = {
   }
 }
 
-Sequences["HP_SquishyDK"] = {
-  SpecID = 250,
-  Author = "Suiseiseki",
-  Help = "Talents: 2112133",
-  Talents="2,1,1,2,1,3,3",
-  StepFunction="Priority",
+Sequences['EX_Blood'] = {
+  Author="EnixLHQ and John Metz",
+  SpecID=250,
+  Talents = "2112133",
+  Help = [[Run at 80ms]],
   Default=1,
   MacroVersions = {
     [1] = {
-      KeyPress = {
-        "/Cast [combat] Dancing Rune Weapon",
-        "/cancelaura Wraith Walk"
+      StepFunction = "Sequential",
+      KeyPress={
+        "/targetenemy [noharm][dead]",
+        "/castsequence  reset=combat  Death's Caress, null",
+        "/cast [combat] Vampiric Blood",
+        "/cast [combat] Dancing Rune Weapon",
       },
-      "/cast [combat] Consumption",
-      "/cast [combat] Blood Boil",
-      "/cast Death Strike",
-      '/castsequence reset=combat Marrowrend, Heart Strike, Heart Strike, Heart Strike, Heart Strike, Heart Strike, Marrowrend',
-      "/castsequence reset=combat Death's Caress, null",
-      "/castsequence reset=combat Marrowrend, Heart Strike, Heart Strike, Heart Strike, Heart Strike, Marrowrend",
-      "/cast Death Strike",
-      KeyRelease = {
-        "/TargetEnemy [noharm][dead]",
-      }
-    }
-  }
+      PreMacro={
+      },
+        "/cast Death Strike",
+        "/cast Marrowrend",
+        "/cast Blood Boil",
+        "/cast Heart Strike",
+        "/cast Consumption",
+        "/cast [@player] Death and Decay",
+        "/cast [@player] Death and Decay",
+        "/castsequence Marrowrend, Marrowrend, Death Strike",
+        "/castsequence Blood Boil, Heart Strike, Heart Strike",
+        "/castsequence Marrowrend, Heart Strike, Blood Boil, Heart Strike",
+      PostMacro={
+      },
+      KeyRelease={
+      },
+    },
+  },
 }
+

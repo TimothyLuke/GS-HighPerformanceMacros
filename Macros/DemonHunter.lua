@@ -3,7 +3,7 @@ local _, Sequences = ...
 ------------------
 ----- Demon Hunter
 ------------------
-Sequences['EX_Havoc_Reborn'] = {
+Sequences['HP_EX_Havoc_Reborn'] = {
   Author="Exqarinah@Perenolde",
   SpecID=577,
   Talents = "332?333",
@@ -44,7 +44,7 @@ Sequences['EX_Havoc_Reborn'] = {
   },
 }
 
-Sequences['EX_Vengeance'] = {
+Sequences['HP_EX_Vengeance'] = {
   Author="Exqarinah@Perenolde",
   SpecID=581,
   Talents = "122233?",

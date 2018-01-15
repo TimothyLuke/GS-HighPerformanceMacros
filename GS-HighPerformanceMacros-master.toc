@@ -1,8 +1,8 @@
-## Interface: 70250
+## Interface: 70300
 ## Title: |cffff0000GS-E:|r |cFF00D1FFWLM High Performance Macros|r - Straight from GitHub
 ## Notes: These macros have been identified by the wowlazymacros.com community as High Performace Macros.  This version has been loaded Direct from GitHub
 ## Author: TimothyLuke
-## Version: v2.1.0
+## Version: v2.2.0
 ## RequiredDeps: GSE
 
 

@@ -4,6 +4,7 @@ local _, Sequences = ...
 ----- Death Knight
 ------------------
 Sequences['HP_EX_Unholy_DA'] = {
+
   Author="EnixLHQ and John Metz",
   SpecID=252,
   Talents = "3211331",
@@ -170,3 +171,4 @@ Sequences['HP_EX_Blood'] = {
     },
   },
 }
+
